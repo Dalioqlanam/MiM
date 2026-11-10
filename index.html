@@ -4,90 +4,440 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>کافی‌نت محمد</title>
+<meta name="theme-color" content="#07172e">
+<meta name="description" content="کافی‌نت محمد؛ خدمات اینترنتی، اداری، چاپ، طراحی گرافیک و خدمات دیجیتال">
+<title>کافی‌نت محمد | خدمات اینترنتی و دیجیتال</title>
+
 <style>
-*{box-sizing:border-box}
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap');
+
+:root{
+--bg:#07172e;
+--bg2:#0b2342;
+--blue:#1685ff;
+--cyan:#35d5ff;
+--white:#f5f9ff;
+--muted:#a8bad1;
+--card:#102b4d;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
-margin:0;
-font-family:Tahoma,Arial,sans-serif;
-background:#f3f6fb;
-color:#17243b;
-line-height:2
+font-family:'Vazirmatn',Tahoma,sans-serif;
+background:var(--bg);
+color:var(--white);
+line-height:1.9;
+overflow-x:hidden;
 }
-header{
-background:#102b50;
-color:white;
-padding:25px 15px;
-text-align:center
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,90%);margin:auto}
+
+/* Navigation */
+nav{
+position:sticky;top:0;z-index:100;
+background:rgba(7,23,46,.92);
+backdrop-filter:blur(18px);
+border-bottom:1px solid #ffffff12;
 }
-header h1{margin:0;font-size:30px}
-header p{color:#d8e7fa}
-main{max-width:850px;margin:25px auto;padding:15px}
+.navbar{
+min-height:76px;display:flex;
+align-items:center;justify-content:space-between;
+gap:20px;
+}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{
+width:45px;height:45px;border-radius:14px;
+background:linear-gradient(135deg,#1685ff,#35d5ff);
+display:grid;place-items:center;
+font-size:23px;font-weight:900;color:#06172e;
+box-shadow:0 5px 25px #1685ff55;
+}
+.brand strong{font-size:18px}
+.brand small{display:block;color:var(--muted);font-size:11px}
+.nav-links{display:flex;gap:25px;align-items:center;font-size:13px;color:#c5d5e9}
+.nav-links a:hover{color:var(--cyan)}
+.nav-btn{
+background:var(--blue);padding:9px 19px;
+border-radius:10px;font-size:13px;font-weight:700;
+}
+
+/* Hero */
 .hero{
-background:white;padding:28px 20px;
-border-radius:18px;text-align:center;
-box-shadow:0 5px 20px #142b5010
+position:relative;overflow:hidden;
+padding:95px 0 85px;
+background:
+radial-gradient(ellipse at 15% 30%,#1685ff30,transparent 40%),
+radial-gradient(ellipse at 85% 70%,#35d5ff16,transparent 35%);
 }
-.hero h2{color:#174b83}
+.hero-grid{
+display:grid;grid-template-columns:1.15fr .85fr;
+align-items:center;gap:55px;
+}
+.eyebrow{
+display:inline-block;padding:5px 14px;
+border:1px solid #35d5ff55;
+border-radius:30px;color:var(--cyan);
+font-size:12px;margin-bottom:20px;
+background:#1685ff12;
+}
+.hero h1{
+font-size:clamp(32px,5vw,55px);
+line-height:1.5;font-weight:900;
+margin-bottom:15px;
+}
+.hero h1 span{
+background:linear-gradient(90deg,#35d5ff,#1685ff);
+-webkit-background-clip:text;color:transparent;
+}
+.hero p{color:var(--muted);max-width:510px;font-size:15px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
 .btn{
-display:inline-block;
-padding:10px 20px;
-margin:6px;
-border-radius:10px;
-color:white;text-decoration:none;
-background:#1674d1
+padding:12px 23px;border-radius:12px;
+display:inline-flex;align-items:center;justify-content:center;
+gap:8px;font-weight:700;font-size:13px;
+transition:.25s;
 }
-.rubika{background:#e65b45}
-section{
-background:white;padding:20px;
-border-radius:15px;margin-top:18px
+.btn:hover{transform:translateY(-4px)}
+.primary{background:linear-gradient(120deg,#1685ff,#35aaff);color:white;box-shadow:0 8px 25px #1685ff35}
+.outline{border:1px solid #ffffff35;color:white}
+.hero-visual{
+position:relative;min-height:310px;
+display:grid;place-items:center;
 }
-h3{color:#174b83}
-.services{
+.glow{
+position:absolute;width:260px;height:260px;
+background:#1685ff45;filter:blur(75px);
+}
+.visual-card{
+position:relative;width:100%;max-width:350px;
+padding:30px;border:1px solid #ffffff24;
+background:linear-gradient(145deg,#153c65dd,#0c2039dd);
+border-radius:28px;
+box-shadow:0 25px 70px #0006;
+transform:rotate(-3deg);
+}
+.visual-top{display:flex;justify-content:space-between;align-items:center}
+.visual-icon{
+width:60px;height:60px;border-radius:18px;
+display:grid;place-items:center;
+font-size:29px;background:#1685ff25;
+}
+.status{color:#5ce6b3;font-size:11px}
+.visual-card h2{font-size:25px;margin-top:25px}
+.visual-card p{font-size:12px;color:var(--muted);margin-top:5px}
+.visual-stats{
+display:grid;grid-template-columns:1fr 1fr;
+gap:12px;margin-top:25px;
+}
+.stat{
+background:#ffffff0c;padding:12px;border-radius:13px;
+font-size:12px;color:#d5e6fa;
+}
+.stat b{display:block;color:var(--cyan);font-size:19px}
+
+/* General sections */
+section{padding:75px 0}
+.section-head{text-align:center;margin-bottom:38px}
+.section-head span{color:var(--cyan);font-size:12px;font-weight:700}
+.section-head h2{font-size:28px;margin:8px 0}
+.section-head p{color:var(--muted);font-size:13px}
+
+/* Services */
+.services-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
-gap:12px
+grid-template-columns:repeat(3,1fr);
+gap:17px;
 }
-.item{
-background:#f1f6fc;
-padding:12px;border-radius:10px
+.service{
+background:linear-gradient(145deg,#102b4d,#0c203a);
+border:1px solid #ffffff12;
+border-radius:19px;padding:23px;
+transition:.3s;
 }
+.service:hover{
+transform:translateY(-7px);
+border-color:#1685ff88;
+box-shadow:0 15px 35px #0003;
+}
+.service-icon{
+width:49px;height:49px;border-radius:14px;
+display:grid;place-items:center;
+font-size:23px;background:#1685ff20;
+margin-bottom:16px;
+}
+.service h3{font-size:16px;margin-bottom:7px}
+.service p{font-size:12px;color:var(--muted)}
+.service ul{list-style:none;margin-top:13px;color:#c4d7ec;font-size:12px}
+.service li{padding:3px 0}
+.service li:before{content:"✓";color:var(--cyan);margin-left:8px}
+
+/* About */
+.about{
+background:linear-gradient(110deg,#0b2442,#102f52);
+border-top:1px solid #ffffff12;
+border-bottom:1px solid #ffffff12;
+}
+.about-grid{
+display:grid;grid-template-columns:1fr 1fr;
+align-items:center;gap:45px;
+}
+.about h2{font-size:29px;margin:12px 0}
+.about p{font-size:14px;color:var(--muted)}
+.features{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:25px}
+.feature{background:#ffffff0b;border-radius:12px;padding:12px;font-size:12px}
+
+/* Contact */
+.contact-box{
+background:linear-gradient(135deg,#123c68,#102a49);
+border:1px solid #ffffff17;
+padding:35px;border-radius:23px;
+display:grid;grid-template-columns:1fr 1fr;gap:25px;
+}
+.contact-item{
+padding:14px;background:#ffffff0c;
+border-radius:13px;margin-top:12px;
+font-size:13px;
+}
+.contact-item span{color:var(--cyan);margin-left:8px}
+.social{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.telegram{background:#1685ff}
+.rubika{background:#e65c50}
+.phone{background:#168b69}
+
+/* Footer */
 footer{
-text-align:center;padding:25px;
-color:#63738a
+border-top:1px solid #ffffff15;
+padding:25px 0;text-align:center;
+color:var(--muted);font-size:12px;
+}
+footer strong{color:var(--cyan)}
+
+@media(max-width:760px){
+.nav-links{display:none}
+.hero{padding:65px 0}
+.hero-grid{grid-template-columns:1fr;gap:30px}
+.hero-visual{min-height:270px}
+.services-grid{grid-template-columns:1fr 1fr}
+.about-grid{grid-template-columns:1fr}
+.contact-box{grid-template-columns:1fr;padding:22px}
+}
+@media(max-width:440px){
+.services-grid{grid-template-columns:1fr}
+.hero h1{font-size:33px}
+.section-head h2{font-size:23px}
+.nav-btn{font-size:11px;padding:8px 12px}
 }
 </style>
 </head>
+
 <body>
-<header>
-<h1>کافی‌نت محمد</h1>
-<p>خدمات اینترنتی، اداری و دیجیتال</p>
+
+<nav>
+<div class="container navbar">
+<a href="#" class="brand">
+<div class="logo">م</div>
+<div>
+<strong>کافی‌نت محمد</strong>
+<small>خدمات اینترنتی و دیجیتال</small>
+</div>
+</a>
+<div class="nav-links">
+<a href="#home">خانه</a>
+<a href="#services">خدمات</a>
+<a href="#about">درباره ما</a>
+<a href="#contact">تماس با ما</a>
+</div>
+<a class="nav-btn" href="#contact">ارتباط با ما</a>
+</div>
+</nav>
+
+<header class="hero" id="home">
+<div class="container hero-grid">
+<div>
+<div class="eyebrow">خدمات اینترنتی، اداری و دیجیتال</div>
+<h1>کارهای اینترنتی‌ات را<br><span>به ما بسپار!</span></h1>
+<p>
+در کافی‌نت محمد، خدمات اینترنتی، امور اداری،
+چاپ و تکثیر، طراحی گرافیک و خدمات دیجیتال
+با دقت و کیفیت انجام می‌شود.
+</p>
+<div class="hero-actions">
+<a href="#services" class="btn primary">مشاهده خدمات ←</a>
+<a href="#contact" class="btn outline">تماس با ما</a>
+</div>
+</div>
+
+<div class="hero-visual">
+<div class="glow"></div>
+<div class="visual-card">
+<div class="visual-top">
+<div class="visual-icon">⌘</div>
+<div class="status">● آماده خدمت‌رسانی</div>
+</div>
+<h2>کافی‌نت محمد</h2>
+<p>همراه مطمئن شما در دنیای خدمات دیجیتال</p>
+<div class="visual-stats">
+<div class="stat"><b>01</b>خدمات اینترنتی</div>
+<div class="stat"><b>02</b>چاپ و طراحی</div>
+<div class="stat"><b>03</b>امور اداری</div>
+<div class="stat"><b>04</b>خدمات دیجیتال</div>
+</div>
+</div>
+</div>
+</div>
 </header>
-<main>
-<div class="hero">
-<h2>به کافی‌نت محمد خوش آمدید</h2>
-<p>انجام سریع و دقیق امور اینترنتی، اداری، دانشجویی و چاپ</p>
-<a class="btn" href="https://t.me/MShCafeNet">کانال تلگرام</a>
-<a class="btn rubika" href="https://rubika.ir/MShCafeNet">کانال روبیکا</a>
+
+<section id="services">
+<div class="container">
+<div class="section-head">
+<span>WHAT WE DO</span>
+<h2>خدمات کافی‌نت محمد</h2>
+<p>مجموعه‌ای از خدمات موردنیاز شما در یک مکان</p>
 </div>
-<section>
-<h3>خدمات ما</h3>
-<div class="services">
-<div class="item">💻 خدمات اینترنتی و اداری</div>
-<div class="item">🎓 خدمات آموزشی و دانشجویی</div>
-<div class="item">🖨️ چاپ، کپی و اسکن</div>
-<div class="item">🎨 طراحی بنر و پوستر</div>
-<div class="item">🎬 تدوین فیلم و کلیپ</div>
-<div class="item">📱 خدمات دیجیتال و کامپیوتری</div>
+
+<div class="services-grid">
+
+<div class="service">
+<div class="service-icon">🌐</div>
+<h3>خدمات اینترنتی و اداری</h3>
+<p>انجام امور اینترنتی و سامانه‌های مختلف</p>
+<ul>
+<li>خدمات دولتی و سامانه‌ها</li>
+<li>امور مالیاتی و بیمه</li>
+<li>ثبت‌نام وام و طرح‌های حمایتی</li>
+<li>نوبت‌گیری اینترنتی</li>
+</ul>
+</div>
+
+<div class="service">
+<div class="service-icon">🎓</div>
+<h3>خدمات آموزشی و دانشجویی</h3>
+<p>امور تحصیلی و دانشگاهی</p>
+<ul>
+<li>ثبت‌نام مدارس و دانشگاه</li>
+<li>انتخاب رشته و واحد</li>
+<li>ثبت‌نام آزمون‌ها</li>
+<li>امور استخدامی و کارنامه</li>
+</ul>
+</div>
+
+<div class="service">
+<div class="service-icon">🖨️</div>
+<h3>چاپ و خدمات کامپیوتری</h3>
+<p>چاپ و آماده‌سازی انواع اسناد</p>
+<ul>
+<li>پرینت رنگی و سیاه‌وسفید</li>
+<li>کپی و اسکن</li>
+<li>تایپ و صفحه‌آرایی</li>
+<li>تبدیل و انتقال فایل</li>
+</ul>
+</div>
+
+<div class="service">
+<div class="service-icon">🎨</div>
+<h3>طراحی گرافیک و تبلیغات</h3>
+<p>طراحی حرفه‌ای محتوای بصری</p>
+<ul>
+<li>بنر و پوستر</li>
+<li>تراکت و کارت ویزیت</li>
+<li>طراحی لوگو</li>
+<li>طرح‌های مذهبی و ترحیم</li>
+</ul>
+</div>
+
+<div class="service">
+<div class="service-icon">🎬</div>
+<h3>تدوین و خدمات رسانه‌ای</h3>
+<p>تولید و ویرایش محتوای ویدئویی</p>
+<ul>
+<li>تدوین فیلم و کلیپ</li>
+<li>مونتاژ مراسم</li>
+<li>ساخت محتوای دیجیتال</li>
+<li>اصلاح ویدئو</li>
+</ul>
+</div>
+
+<div class="service">
+<div class="service-icon">💻</div>
+<h3>خدمات دیجیتال</h3>
+<p>راهکارهای متنوع کامپیوتری</p>
+<ul>
+<li>آماده‌سازی فایل‌ها</li>
+<li>خدمات نرم‌افزاری</li>
+<li>طراحی و برنامه‌نویسی اپلیکیشن</li>
+<li>سفارش چاپ</li>
+</ul>
+</div>
+
+</div>
 </div>
 </section>
-<section>
-<h3>راه‌های ارتباطی</h3>
-<p>📍 آدرس: آدرس کافی‌نت محمد</p>
-<p>📞 شماره تماس: شماره خود را وارد کنید</p>
-<p>📢 تلگرام و روبیکا: @MShCafeNet</p>
+
+<section class="about" id="about">
+<div class="container about-grid">
+<div>
+<span style="color:var(--cyan);font-size:12px">ABOUT US</span>
+<h2>چرا کافی‌نت محمد؟</h2>
+<p>
+هدف ما ارائه خدمات متنوع اینترنتی و دیجیتال
+با دقت، نظم و احترام به زمان شماست.
+تلاش می‌کنیم امور موردنیازتان را در محیطی
+مطمئن و حرفه‌ای انجام دهیم.
+</p>
+<div class="features">
+<div class="feature">✓ دقت در انجام خدمات</div>
+<div class="feature">✓ پاسخ‌گویی مناسب</div>
+<div class="feature">✓ تنوع خدمات</div>
+<div class="feature">✓ صرفه‌جویی در زمان</div>
+</div>
+</div>
+<div>
+<div class="visual-card" style="transform:none;max-width:100%">
+<div class="visual-icon">✦</div>
+<h2>همراه شما هستیم</h2>
+<p>از ثبت‌نام اینترنتی تا چاپ، طراحی و خدمات دیجیتال؛ کنار شما هستیم.</p>
+</div>
+</div>
+</div>
 </section>
-</main>
-<footer>© تمامی حقوق متعلق به کافی‌نت محمد است.</footer>
+
+<section id="contact">
+<div class="container">
+<div class="section-head">
+<span>CONTACT US</span>
+<h2>با ما در ارتباط باشید</h2>
+<p>برای دریافت خدمات یا اطلاع از جزئیات با ما تماس بگیرید.</p>
+</div>
+
+<div class="contact-box">
+<div>
+<h3>اطلاعات تماس</h3>
+<div class="contact-item"><span>📞</span> شماره تماس: شماره خود را وارد کنید</div>
+<div class="contact-item"><span>📍</span> آدرس: آدرس کافی‌نت را وارد کنید</div>
+<div class="contact-item"><span>🕒</span> ساعات کاری: ساعات فعالیت را وارد کنید</div>
+</div>
+
+<div>
+<h3>شبکه‌های اجتماعی</h3>
+<p style="color:var(--muted);font-size:13px;margin-top:8px">
+برای اطلاع از خدمات و دریافت آخرین اطلاعیه‌ها به کانال‌های ما بپیوندید.
+</p>
+<div class="social">
+<a class="btn telegram" href="https://t.me/MShCafeNet" target="_blank">تلگرام</a>
+<a class="btn rubika" href="https://rubika.ir/MShCafeNet" target="_blank">روبیکا</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="container">
+© تمامی حقوق متعلق به <strong>کافی‌نت محمد</strong> است.
+<br>طراحی و اجرا با هدف ارائه خدمات بهتر
+</div>
+</footer>
+
 </body>
 </html>
